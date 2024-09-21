@@ -24,7 +24,7 @@
             border-radius: 10px;
             margin: 20px 0; /* Espacio entre elementos */
             display: inline-block;
-            width: 300px; /* Ancho fijo */
+            width: 250px; /* Ancho más pequeño */
         }
         #info-section {
             margin: 20px 0; /* Espacio entre elementos */
@@ -34,6 +34,7 @@
             cursor: pointer;
             width: fit-content;
             display: inline-block;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para el título */
         }
         #info-content {
             display: none;
@@ -53,7 +54,7 @@
             text-align: center; /* Centrado del texto en el input */
         }
         ::placeholder {
-            font-size: 12px; /* Tamaño más pequeño para el placeholder */
+            font-size: 16px; /* Tamaño más grande para el placeholder */
             color: #aaa; /* Color del placeholder */
         }
         h1, h2 {
@@ -70,7 +71,7 @@
         <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario..." 
                required 
                style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                      background-color: white; color: #333; font-size: 16px;"/> <!-- Cambié el tamaño del placeholder -->
+                      background-color: white; color: #333; font-size: 16px;"/> <!-- Tamaño del placeholder aumentado -->
         
         <div id="amount-section" style="display: none; margin-top: 20px;">
             <label for="amount" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Cantidad (hasta 999)</label>
@@ -88,7 +89,7 @@
     </section>
 
     <div id="info-section">
-        <h2>Información</h2>
+        <h2>Información de la página</h2>
         <div id="info-content">
             <p>Este sitio permite solicitar Robux gratis. Ingresen su usuario y cantidad, y yo recibiré su solicitud.</p>
         </div>
