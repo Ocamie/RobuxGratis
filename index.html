@@ -7,78 +7,91 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('download.jpg') no-repeat center center fixed; /* Fondo con la imagen */
+            background: url('download.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
-            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+            z-index: 1;
         }
         .username-section {
-            background-color: rgba(30, 30, 30, 0.8); /* Fondo oscuro con opacidad */
+            background-color: rgba(30, 30, 30, 1); /* Fondo gris oscuro */
             padding: 20px;
             border-radius: 10px;
-            margin: 20px 0; /* Espacio entre elementos */
+            margin: 20px 0;
             display: inline-block;
-            width: 250px; /* Ancho más pequeño */
+            width: 220px; /* Ancho más pequeño */
+            position: relative;
+            z-index: 2; /* Asegura que el cuadro esté encima del overlay */
         }
         #info-section {
-            margin: 20px 0; /* Espacio entre elementos */
+            margin: 20px 0;
             border: 1px solid white;
             border-radius: 10px;
             padding: 10px;
             cursor: pointer;
-            width: fit-content;
             display: inline-block;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para el título */
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
         #info-content {
             display: none;
             margin-top: 10px;
             text-align: left;
-            font-size: 14px; /* Tamaño de fuente simplificado */
+            font-size: 14px;
         }
         footer {
-            margin-top: 30px; /* Espacio adicional entre elementos y pie de página */
+            margin-top: auto; /* Asegura que el pie de página esté al final */
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
             width: 100%;
-            position: absolute;
-            bottom: 0;
+            text-align: center;
         }
         input {
-            text-align: center; /* Centrado del texto en el input */
+            text-align: center;
         }
         ::placeholder {
-            font-size: 16px; /* Tamaño más grande para el placeholder */
-            color: #aaa; /* Color del placeholder */
+            font-size: 16px; 
+            color: #aaa;
         }
         h1, h2 {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para títulos */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
 <body>
 
+    <div class="overlay"></div>
+
     <h1>Consigue tus Robux</h1>
 
     <section class="username-section">
-        <label for="username" style="font-size: 15px; display: block; margin-bottom: 10px; color: white;">• Nombre de usuario de Roblox</label>
+        <label for="username" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Nombre de usuario de Roblox</label>
         <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario..." 
                required 
                style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                      background-color: white; color: #333; font-size: 16px;"/> <!-- Tamaño del placeholder aumentado -->
+                      background-color: white; color: #333; font-size: 16px;"/>
         
         <div id="amount-section" style="display: none; margin-top: 20px;">
-            <label for="amount" style="font-size: 15px; display: block; margin-bottom: 10px; color: white;">• Cantidad (hasta 999)</label>
+            <label for="amount" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Cantidad (hasta 999)</label>
             <input type="number" id="amount" name="amount" placeholder="Introduce cantidad..." 
                    max="999" required 
                    style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                          background-color: white; color: #333; font-size: 16px; text-align: center;"/> <!-- Centrado del texto -->
+                          background-color: white; color: #333; font-size: 16px; text-align: center;"/>
         </div>
         
         <button id="submit-button" type="button" style="width: auto; padding: 8px; border: none; border-radius: 5px; 
@@ -88,10 +101,10 @@
         <div id="confirmation-message" style="margin-top: 20px; color: white; display: none;"></div>
     </section>
 
-    <div id="info-section">
+    <div id="info-section" onclick="toggleInfo()">
         <h2>Información de la página</h2>
         <div id="info-content">
-            <p>Este sitio permite solicitar Robux gratis. Ingresen su usuario y cantidad, y yo recibiré su solicitud.</p>
+            <p>Dada la situación actual de estafas, aquí pueden solicitar Robux gratis. Ingresen su usuario y cantidad.</p>
         </div>
     </div>
 
@@ -140,11 +153,10 @@
             }
         });
 
-        // Manejo del elemento colapsable
-        document.getElementById('info-section').onclick = function() {
+        function toggleInfo() {
             const content = document.getElementById('info-content');
             content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        };
+        }
     </script>
 </body>
 </html>
