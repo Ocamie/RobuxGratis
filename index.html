@@ -49,6 +49,16 @@
             position: absolute;
             bottom: 0;
         }
+        input {
+            text-align: center; /* Centrado del texto en el input */
+        }
+        ::placeholder {
+            font-size: 12px; /* Tamaño más pequeño para el placeholder */
+            color: #aaa; /* Color del placeholder */
+        }
+        h1, h2 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para títulos */
+        }
     </style>
 </head>
 <body>
@@ -60,7 +70,7 @@
         <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario..." 
                required 
                style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                      background-color: white; color: #333; font-size: 16px; text-align: center;"/> <!-- Centrado del texto -->
+                      background-color: white; color: #333; font-size: 16px;"/> <!-- Cambié el tamaño del placeholder -->
         
         <div id="amount-section" style="display: none; margin-top: 20px;">
             <label for="amount" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Cantidad (hasta 999)</label>
