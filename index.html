@@ -7,20 +7,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('download.jpg');
-            background-size: cover;
+            background-color: #121212; /* Fondo más oscuro */
             color: white;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
         .username-section {
             background-color: rgba(30, 30, 30, 0.8);
             padding: 20px;
             border-radius: 10px;
-            margin-top: 20px;
+            margin: 20px 0; /* Espacio entre elementos */
             display: inline-block;
+            width: 300px; /* Ancho fijo */
         }
         #info-section {
-            margin-top: 20px;
+            margin: 20px 0; /* Espacio entre elementos */
             border: 1px solid white;
             border-radius: 10px;
             padding: 10px;
@@ -34,9 +40,12 @@
             text-align: left;
         }
         footer {
-            margin-top: 20px;
+            margin-top: 30px; /* Espacio adicional entre elementos y pie de página */
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
         }
     </style>
 </head>
@@ -61,7 +70,7 @@
         
         <button id="submit-button" type="button" style="width: auto; padding: 8px; border: none; border-radius: 5px; 
                                 background-color: #28a745; color: white; font-size: 16px; cursor: pointer; 
-                                margin-top: 10px; margin-left: 10px;">Siguiente</button>
+                                margin-top: 10px;">Siguiente</button>
 
         <div id="confirmation-message" style="margin-top: 20px; color: white; display: none;"></div>
     </section>
