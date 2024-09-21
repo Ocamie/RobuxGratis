@@ -15,7 +15,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
+        }
+
+        .title {
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: -30px; /* Subir el texto cerca del cuadro negro */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Añadir sombra al texto */
         }
 
         .container {
@@ -27,11 +36,6 @@
             max-width: 450px;
             width: 100%;
             box-sizing: border-box;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-            font-size: 24px;
         }
 
         label {
@@ -82,8 +86,9 @@
 </head>
 <body>
 
+    <h1 class="title">Get Robux</h1> <!-- Título separado del cuadro negro -->
+
     <div class="container">
-        <h1>Get Robux</h1>
         <p>Robux allows you to purchase upgrades for your avatar or buy special abilities in experiences.</p>
         
         <label for="username">Roblox username</label>
