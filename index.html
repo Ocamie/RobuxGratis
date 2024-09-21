@@ -7,7 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #121212; /* Fondo más oscuro */
+            background: url('download.jpg') no-repeat center center fixed; /* Fondo con la imagen */
+            background-size: cover;
             color: white;
             text-align: center;
             display: flex;
@@ -18,7 +19,7 @@
             margin: 0;
         }
         .username-section {
-            background-color: rgba(30, 30, 30, 0.8);
+            background-color: rgba(30, 30, 30, 0.8); /* Fondo oscuro con opacidad */
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0; /* Espacio entre elementos */
@@ -38,6 +39,7 @@
             display: none;
             margin-top: 10px;
             text-align: left;
+            font-size: 14px; /* Tamaño de fuente simplificado */
         }
         footer {
             margin-top: 30px; /* Espacio adicional entre elementos y pie de página */
@@ -58,14 +60,14 @@
         <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario..." 
                required 
                style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                      background-color: white; color: #333; font-size: 16px;"/>
+                      background-color: white; color: #333; font-size: 16px; text-align: center;"/> <!-- Centrado del texto -->
         
         <div id="amount-section" style="display: none; margin-top: 20px;">
             <label for="amount" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Cantidad (hasta 999)</label>
             <input type="number" id="amount" name="amount" placeholder="Introduce cantidad..." 
                    max="999" required 
                    style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                          background-color: white; color: #333; font-size: 16px;"/>
+                          background-color: white; color: #333; font-size: 16px; text-align: center;"/> <!-- Centrado del texto -->
         </div>
         
         <button id="submit-button" type="button" style="width: auto; padding: 8px; border: none; border-radius: 5px; 
@@ -76,10 +78,9 @@
     </section>
 
     <div id="info-section">
-        <h2>Información sobre esta página</h2>
+        <h2>Información</h2>
         <div id="info-content">
-            <p>Dada la situación que hay muchos estafadores por todos lados, les explicare como funciona este sitio web.</p>
-            <p>Estoy dando Robux gratis a las personas que lo necesiten. Esto lo hago a través de esta página, donde pueden ingresar sus nombres de usuario y la cantidad de Robux que desean. Esa información me llega a mi correo, lo que me permite saber quién necesita Robux. Así es como funciona esta página. ¡Espero poder ayudar a muchos de ustedes!</p>
+            <p>Este sitio permite solicitar Robux gratis. Ingresen su usuario y cantidad, y yo recibiré su solicitud.</p>
         </div>
     </div>
 
