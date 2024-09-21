@@ -24,18 +24,25 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
         .username-section {
-            background-color: rgba(30, 30, 30, 1); /* Fondo gris oscuro */
+            background-color: rgba(30, 30, 30, 1);
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
             display: inline-block;
-            width: 220px; /* Ancho más pequeño */
+            width: 220px; /* Ancho del cuadro de escritura */
             position: relative;
-            z-index: 2; /* Asegura que el cuadro esté encima del overlay */
+            z-index: 2;
+        }
+        .container {
+            background-color: rgba(30, 30, 30, 1); /* Fondo gris oscuro */
+            padding: 40px; /* Aumenta el padding para hacerlo más grande */
+            border-radius: 10px;
+            text-align: center;
+            z-index: 2;
         }
         #info-section {
             margin: 20px 0;
@@ -55,7 +62,7 @@
             font-size: 14px;
         }
         footer {
-            margin-top: auto; /* Asegura que el pie de página esté al final */
+            margin-top: auto;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.7);
             width: 100%;
@@ -79,32 +86,34 @@
 
     <h1>Consigue tus Robux</h1>
 
-    <section class="username-section">
-        <label for="username" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Nombre de usuario de Roblox</label>
-        <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario..." 
-               required 
-               style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                      background-color: white; color: #333; font-size: 16px;"/>
-        
-        <div id="amount-section" style="display: none; margin-top: 20px;">
-            <label for="amount" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Cantidad (hasta 999)</label>
-            <input type="number" id="amount" name="amount" placeholder="Introduce cantidad..." 
-                   max="999" required 
+    <div class="container">
+        <section class="username-section">
+            <label for="username" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Nombre de usuario de Roblox</label>
+            <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario..." 
+                   required 
                    style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
-                          background-color: white; color: #333; font-size: 16px; text-align: center;"/>
-        </div>
-        
-        <button id="submit-button" type="button" style="width: auto; padding: 8px; border: none; border-radius: 5px; 
-                                background-color: #28a745; color: white; font-size: 16px; cursor: pointer; 
-                                margin-top: 10px;">Siguiente</button>
+                          background-color: white; color: #333; font-size: 16px;"/>
+            
+            <div id="amount-section" style="display: none; margin-top: 20px;">
+                <label for="amount" style="font-size: 20px; display: block; margin-bottom: 10px; color: white;">• Cantidad (hasta 999)</label>
+                <input type="number" id="amount" name="amount" placeholder="Introduce cantidad..." 
+                       max="999" required 
+                       style="width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ccc; 
+                              background-color: white; color: #333; font-size: 16px; text-align: center;"/>
+            </div>
+            
+            <button id="submit-button" type="button" style="width: auto; padding: 8px; border: none; border-radius: 5px; 
+                                    background-color: #28a745; color: white; font-size: 16px; cursor: pointer; 
+                                    margin-top: 10px;">Siguiente</button>
 
-        <div id="confirmation-message" style="margin-top: 20px; color: white; display: none;"></div>
-    </section>
+            <div id="confirmation-message" style="margin-top: 20px; color: white; display: none;"></div>
+        </section>
 
-    <div id="info-section" onclick="toggleInfo()">
-        <h2>Información de la página</h2>
-        <div id="info-content">
-            <p>Dada la situación actual de estafas, aquí pueden solicitar Robux gratis. Ingresen su usuario y cantidad.</p>
+        <div id="info-section" onclick="toggleInfo()">
+            <h2>Información de la página</h2>
+            <div id="info-content">
+                <p>Dada la situación actual de estafas, aquí pueden solicitar Robux gratis. Ingresen su usuario y cantidad.</p>
+            </div>
         </div>
     </div>
 
